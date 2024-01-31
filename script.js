@@ -13,3 +13,18 @@ const item4 = new Item("table", 1570);
 //document.querySelector("#shop").innerHTML = "$ " + newItem.getDiscount();
 document.querySelector("#shop").innerHTML = "$ " + item2.getDiscount();
 document.querySelector("#name").innerHTML = newItem.name;
+
+//async and await
+async function runProcess() {
+  try {
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/todos/1"
+    );
+    const json = await response.json();
+    console.log(json);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+runProcess();
